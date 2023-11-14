@@ -6,9 +6,56 @@ body {
     #ffffff 0.9500000000000001px
   );
   background-size: 19px 19px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1,
 footer {
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+h2 {
+  margin: 0 0 15px;
+  font-size: 35px;
+  
+}
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.pattern {
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  margin: 60px auto;
+  border: 5px solid black;
+  border-radius: 5px;
+  box-shadow: rgba(100,100,111,0.2), 0px 7px 29px 0px;
+}
+
+.city {
+ 
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  border-bottom: 1px dotted;
+  padding: 20px 0;
+}
+
+.city:last-child{
+  border:none;
+}
+.time {
+  font-size: 40px;
+  font-weight: bold;
+}
+.time small {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+
+
+
