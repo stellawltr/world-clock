@@ -3,7 +3,7 @@ function updateFrankfurtTime() {
   let FrankfurtElement = document.querySelector("#frankfurt");
   let FrankfurtDateElement = FrankfurtElement.querySelector(".date");
   let FrankfurtTimeElement = FrankfurtElement.querySelector(".time");
-  let FrankfurtTime = moment().tz("Europe/Berlin");
+  let FrankfurtTime = moment().tz("Europe/Frankfurt");
 
   FrankfurtDateElement.innerHTML = FrankfurtTime.format("MMMM Do YYYY");
   FrankfurtTimeElement.innerHTML = FrankfurtTime.format(
@@ -36,3 +36,26 @@ function updateAucklandTime() {
   );
 }
 setInterval(updateAucklandTime, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+  <div class="city">
+                <div>
+                    <h2>${cityName}</h2>
+                    <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+                </div>
+                <div class="time">${cityTime.format(
+                  "h:mm:ss"
+                )}<small>${cityTime.format("A")}</small></div>
+            </div>
+
+  
+  `;
+}
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
