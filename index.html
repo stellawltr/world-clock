@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-10-year-range.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-10-year-range.js"></script>
     <title>Document</title>
 </head>
 
@@ -15,43 +16,44 @@
     <div class="pattern">
 
         <h1>WORLD CLOCK</h1>
-        <select>
+        <select id="city">
             <option value="">Select a city</option>
-            <option value="">Zürich</option>
-            <option value="">Auckland</option>
-            <option value="">Tokyo</option>
+            <option value="Europe/Frankfurt">Frankfurt</option>
+            <option value="America/New_York">New York</option>
+            <option value="Australia/Perth">Perth</option>
         </select>
+        <div id="cities">
+            <div class="city" id="frankfurt">
+                <div>
+                    <h2>Frankfurt</h2>
+                    <div class="date"></div>
+                </div>
+                <div class="time"><small>PM</small></div>
+            </div>
 
-        <div class="city"id="frankfurt">
-            <div>
-                <h2>Frankfurt</h2>
-                <div class="date"></div>
+
+            <div class="city" id="tokyo">
+                <div>
+                    <h2>Tokyo</h2>
+                    <div class="date"></div>
+                </div>
+                <div class="time"><small>PM</small></div>
             </div>
-            <div class="time"><small>PM</small></div>
-        </div>
-       
-       
-        <div class="city" id="tokyo">
-            <div>
-                <h2>Tokyo</h2>
-                <div class="date"></div>
+
+            <div class="city" id="aucklamd">
+                <div>
+                    <h2>Auckland</h2>
+                    <div class="date"></div>
+                </div>
+                <div class="time"> <small>PM</small></div>
             </div>
-            <div class="time"><small>PM</small></div>
-        </div>
-        
-        <div class="city" id="aucklamd">
-            <div>
-                <h2>Auckland</h2>
-                <div class="date"></div>
-            </div>
-            <div class="time"> <small>PM</small></div>
         </div>
     </div>
     <footer>Coded by Stella Walter, open sourced on <a href="https://github.com/stellawltr/world-clock"
             target="_blank">GitHub</a></footer>
 
     <script src="javascript/index.js"></script>
-    
+
 </body>
 
 </html>
